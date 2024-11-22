@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237707691686",
+    "project_id": "konglog-7b912",
+    "storage_bucket": "konglog-7b912.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237707691686:android:7c418e73c13c0b9528d667",
+        "android_client_info": {
+          "package_name": "com.konglog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAipHa8YTdq4NuF-aZm3_LT6ge-o7HSaE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
