@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,13 +5,13 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:konglog/core/theme/app_color.dart';
 
 import 'core/router/router.dart';
-import 'firebase_options.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // 빌드 개 쳐 느려짐
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
   initializeDateFormatting()
       .then((_) => runApp(const ProviderScope(child: MyApp())));
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../src/kong_calender/presentation/calendar_screen.dart';
+import '../../src/kong_calender/presentation/view/calendar_screen.dart';
 import '../../src/kong_log/presentation/calendar_screen.dart';
 import '../../src/kong_setting/presentation/setting_screen.dart';
 

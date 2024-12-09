@@ -25,6 +25,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
       lastDay: DateTime.utc(2099, 12, 31),
       focusedDay: _focusedDay,
       calendarFormat: _calendarFormat,
+      availableGestures: AvailableGestures.horizontalSwipe,
       // 포맷을 하나로 제한
       // availableCalendarFormats: const {
       //   CalendarFormat.month: 'Month',

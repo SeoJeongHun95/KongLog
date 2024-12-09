@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/router/bottom_nav_bar.dart';
-import 'widgets/calendar_widget.dart';
-import 'widgets/dash_board_widget.dart';
-import 'widgets/event_list_widget.dart';
+import '../../../../core/router/bottom_nav_bar.dart';
+import '../widgets/calendar_widget.dart';
+import '../widgets/dash_board_widget.dart';
+import '../widgets/event_list_widget.dart';
 
 class CalendarScreen extends StatelessWidget {
   const CalendarScreen({super.key});
