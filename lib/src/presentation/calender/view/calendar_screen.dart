@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:konglog/src/presentation/calender/widget/month_kong_widget.dart';
+import 'package:konglog/src/presentation/calender/widget/month_tot_widget.dart';
 
 import '../../../../core/router/bottom_nav_bar.dart';
-import '../widgets/calendar_widget.dart';
-import '../widgets/dash_board_widget.dart';
-import '../widgets/event_list_widget.dart';
+import '../widget/calendar_widget.dart';
 
 class CalendarScreen extends StatelessWidget {
   const CalendarScreen({super.key});
@@ -24,9 +24,10 @@ class CalendarScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                DashBoardWidget(),
+                MonthKongWidget(),
                 CalendarWidget(),
-                EventListWidget(),
+                MonthTotWidget(),
+                // EventListWidget(),
               ],
             ),
           ),
