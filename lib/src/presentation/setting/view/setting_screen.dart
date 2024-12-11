@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/router/bottom_nav_bar.dart';
+import '../../../../core/router/bottom_nav_bar.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});

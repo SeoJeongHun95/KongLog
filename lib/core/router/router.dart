@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../src/presentation/kong_calender/view/calendar_screen.dart';
-import '../../src/presentation/kong_log/view/calendar_screen.dart';
-import '../../src/presentation/kong_setting/setting_screen.dart';
+import '../../src/presentation/calender/view/calendar_screen.dart';
+import '../../src/presentation/log/view/calendar_screen.dart';
+import '../../src/presentation/setting/view/setting_screen.dart';
 
 // GoRouter 설정
 final goRouterProvider = Provider<GoRouter>((ref) {

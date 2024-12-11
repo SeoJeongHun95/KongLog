@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarWidget extends StatefulWidget {
@@ -31,6 +32,40 @@ class _CalendarWidgetState extends State<CalendarWidget> {
       //   CalendarFormat.month: 'Month',
       //   CalendarFormat.twoWeeks: 'TwoWeeks',
       // },
+      calendarBuilders: CalendarBuilders(
+        headerTitleBuilder: (context, day) {
+          return GestureDetector(
+            onTap: () async {
+              final DateTime? sDay = await DatePicker.showSimpleDatePicker(
+                context,
+                initialDate: _focusedDay,
+                firstDate: DateTime.utc(2023, 1, 1),
+                lastDate: DateTime.utc(2099, 12, 31),
+                dateFormat: "yyyy-MMMM-dd",
+                locale: DateTimePickerLocale.ko,
+                looping: false,
+                backgroundColor: Theme.of(context).colorScheme.surface,
+                textColor: Theme.of(context).colorScheme.onSurface,
+                titleText: "날짜 선택",
+                confirmText: "선택",
+                cancelText: "취소",
+                reverse: true,
+              );
+              setState(() {
+                if (sDay != null) _focusedDay = sDay;
+              });
+            },
+            child: Center(
+              child: Text(
+                "${day.year}년 ${day.month}월",
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          );
+        },
+      ),
       selectedDayPredicate: (day) {
         // Use `selectedDayPredicate` to determine which day is currently selected.
         // If this returns true, then `day` will be marked as selected.
