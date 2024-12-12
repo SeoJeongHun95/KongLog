@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../src/view/add/view/add_screen.dart';
+import '../theme/app_color.dart';
+
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
 
@@ -8,6 +11,10 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: _getCurrentIndex(context),
+      selectedFontSize: 12,
+      selectedItemColor: AppColor.KongBlue1,
+      unselectedItemColor: AppColor.KongBlack5,
+      type: BottomNavigationBarType.fixed,
       onTap: (index) {
         switch (index) {
           case 0:
@@ -17,7 +24,17 @@ class BottomNavBar extends StatelessWidget {
             context.go('/log');
             break;
           case 2:
-            context.go('/settings');
+            showModalBottomSheet(
+              showDragHandle: true,
+              context: context,
+              builder: (context) => const AddScreen(),
+            );
+            break;
+          case 3:
+            context.go('/management');
+            break;
+          case 4:
+            context.go('/more');
             break;
         }
       },
@@ -31,8 +48,16 @@ class BottomNavBar extends StatelessWidget {
           label: '로그',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: '설정',
+          icon: Icon(Icons.add),
+          label: '공수등록',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.build_rounded),
+          label: '업체관리',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.more_horiz_rounded),
+          label: '더보기',
         ),
       ],
     );
@@ -45,8 +70,12 @@ class BottomNavBar extends StatelessWidget {
         return 0;
       case '/log':
         return 1;
-      case '/settings':
+      case '/add':
         return 2;
+      case '/management':
+        return 3;
+      case '/more':
+        return 4;
       default:
         return 0;
     }

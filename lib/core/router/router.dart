@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../src/presentation/calender/view/calendar_screen.dart';
-import '../../src/presentation/log/view/calendar_screen.dart';
-import '../../src/presentation/setting/view/setting_screen.dart';
+import '../../src/view/add/view/add_screen.dart';
+import '../../src/view/calender/view/calendar_screen.dart';
+import '../../src/view/log/view/calendar_screen.dart';
+import '../../src/view/management/view/add_company_screen.dart';
+import '../../src/view/management/view/management_company_screen.dart';
+import '../../src/view/more/view/more_screen.dart';
 
 // GoRouter 설정
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/calendar', // 기본적으로 캘린더 화면으로 시작
     routes: [
-      // 캘린더 화면 라우트
       GoRoute(
         path: '/calendar',
         pageBuilder: (context, state) => buildPageWithDefaultTransition(
@@ -20,7 +22,14 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           child: const CalendarScreen(),
         ),
       ),
-      // 로그 화면 라우트
+      GoRoute(
+        path: '/add',
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const AddScreen(),
+        ),
+      ),
       GoRoute(
         path: '/log',
         pageBuilder: (context, state) => buildPageWithDefaultTransition(
@@ -29,13 +38,30 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           child: const LogScreen(),
         ),
       ),
-      // 설정 화면 라우트
       GoRoute(
-        path: '/settings',
+        path: '/management',
         pageBuilder: (context, state) => buildPageWithDefaultTransition(
           context: context,
           state: state,
-          child: const SettingScreen(),
+          child: const ManagementCompanyScreen(),
+        ),
+        routes: [
+          GoRoute(
+            path: 'add',
+            pageBuilder: (context, state) => buildPageWithDefaultTransition(
+              context: context,
+              state: state,
+              child: const AddCompanyScreen(),
+            ),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: '/more',
+        pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          context: context,
+          state: state,
+          child: const MoreScreen(),
         ),
       ),
     ],

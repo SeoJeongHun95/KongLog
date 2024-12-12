@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:237707691686:android:7c418e73c13c0b9528d667",
+        "mobilesdk_app_id": "1:237707691686:android:175249b17197bb3828d667",
         "android_client_info": {
-          "package_name": "com.konglog"
+          "package_name": "com.example.konglog"
         }
       },
       "oauth_client": [],

@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.konglog">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.konglog">
     <application
         android:label="konglog"
         android:name="${applicationName}"

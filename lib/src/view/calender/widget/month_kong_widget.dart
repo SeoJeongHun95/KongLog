@@ -3,15 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theme/app_color.dart';
 
-class MonthTotWidget extends StatefulWidget {
-  const MonthTotWidget({super.key});
-
-  @override
-  State<MonthTotWidget> createState() => _MonthTotWidgetState();
-}
-
-class _MonthTotWidgetState extends State<MonthTotWidget> {
-  bool _visibility_Money = false;
+class MonthKongWidget extends StatelessWidget {
+  const MonthKongWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +30,14 @@ class _MonthTotWidgetState extends State<MonthTotWidget> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   flex: 1,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         child: Text(
-                          "이달 총합",
+                          "이달의 공수",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -53,19 +45,6 @@ class _MonthTotWidgetState extends State<MonthTotWidget> {
                           ),
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            _visibility_Money = !_visibility_Money;
-                          });
-                        },
-                        child: Icon(
-                          _visibility_Money
-                              ? Icons.visibility_off
-                              : Icons.visibility,
-                          color: Colors.white,
-                        ),
-                      )
                     ],
                   ),
                 ),
@@ -78,23 +57,28 @@ class _MonthTotWidgetState extends State<MonthTotWidget> {
                         Expanded(
                             flex: 2,
                             child: RichText(
-                              text: TextSpan(
+                              text: const TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text:
-                                        _visibility_Money ? '123,123,123' : "",
-                                    style: const TextStyle(
+                                    text: '123.5',
+                                    style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 32,
                                     ),
                                   ),
-                                  TextSpan(text: _visibility_Money ? ' 원' : ""),
+                                  TextSpan(
+                                    text: ' 공수',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
                                 ],
                               ),
                             )),
                         const Expanded(
                           child: Text(
-                            "월급날까지 앞으로 N일",
+                            "출근일수 N일",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,

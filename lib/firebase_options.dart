@@ -65,5 +65,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'konglog-7b912.firebasestorage.app',
     iosBundleId: 'com.example.konglog',
   );
-
 }
