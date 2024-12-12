@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../src/view/add/view/add_screen.dart';
+import '../../src/views/add/view/add_screen.dart';
 import '../theme/app_color.dart';
 
 class BottomNavBar extends StatelessWidget {

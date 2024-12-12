@@ -1,5 +1,5 @@
 // repositories/company_repository.dart
-import '../domain/company_local_data_source.dart';
+import '../datasources/company_local_data_source.dart';
 import '../models/company.dart';
 
 class CompanyRepository {

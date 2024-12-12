@@ -1,11 +1,9 @@
-// views/company_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../models/company.dart';
-import '../../../viewmodel/add_company_view_model.dart';
+import '../../../viewmodels/add_company_view_model.dart';
 
-// views/company_screen.dart
 class AddCompanyScreen extends ConsumerWidget {
   const AddCompanyScreen({super.key});
 

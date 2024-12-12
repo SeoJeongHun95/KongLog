@@ -2,7 +2,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
 
-import '../domain/company_local_data_source.dart';
+import '../datasources/company_local_data_source.dart';
 import '../models/company.dart';
 import '../repositories/company_repository.dart';
 

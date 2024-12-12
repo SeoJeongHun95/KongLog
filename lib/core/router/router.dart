@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../src/view/add/view/add_screen.dart';
-import '../../src/view/calender/view/calendar_screen.dart';
-import '../../src/view/log/view/calendar_screen.dart';
-import '../../src/view/management/view/add_company_screen.dart';
-import '../../src/view/management/view/management_company_screen.dart';
-import '../../src/view/more/view/more_screen.dart';
+import '../../src/views/add/view/add_screen.dart';
+import '../../src/views/calender/view/calendar_screen.dart';
+import '../../src/views/log/view/calendar_screen.dart';
+import '../../src/views/management/view/add_company_screen.dart';
+import '../../src/views/management/view/management_company_screen.dart';
+import '../../src/views/more/view/more_screen.dart';
 
 // GoRouter 설정
 final goRouterProvider = Provider<GoRouter>((ref) {
