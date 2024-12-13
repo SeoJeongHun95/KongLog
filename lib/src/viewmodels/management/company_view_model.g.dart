@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'add_company_view_model.dart';
+part of 'company_view_model.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$companyViewModelHash() => r'cb98a1179c7b49dd8dae1b3079585b7b5e85b644';
+String _$companyViewModelHash() => r'df2590a654fe0cd0d4b3c1185e6983b66b1ecb41';
 
 /// See also [CompanyViewModel].
 @ProviderFor(CompanyViewModel)
