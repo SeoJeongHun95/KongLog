@@ -23,3 +23,6 @@ CompanyRepository companyRepository(Ref ref) {
   final localDataSource = CompanyDataSource(box);
   return CompanyRepository(localDataSource);
 }
+
+//박스를 열음
+// 급박스를 data영역의 box를 컨트롤할수있는 거로 티턴을함
