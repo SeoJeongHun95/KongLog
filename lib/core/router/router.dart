@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import '../../src/views/add/view/add_screen.dart';
 import '../../src/views/calender/view/calendar_screen.dart';
 import '../../src/views/log/view/calendar_screen.dart';
-import '../../src/views/management/view/add_company_screen.dart';
 import '../../src/views/management/view/management_company_screen.dart';
 import '../../src/views/more/view/more_screen.dart';
 
@@ -45,15 +44,15 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           state: state,
           child: const ManagementCompanyScreen(),
         ),
-        routes: [
-          GoRoute(
-            path: 'add',
-            pageBuilder: (context, state) => buildPageWithDefaultTransition(
-              context: context,
-              state: state,
-              child: const AddCompanyScreen(),
-            ),
-          ),
+        routes: const [
+          // GoRoute(
+          //   path: 'add',
+          //   pageBuilder: (context, state) => buildPageWithDefaultTransition(
+          //     context: context,
+          //     state: state,
+          //     child: const AddCompanyScreen(),
+          //   ),
+          // ),
         ],
       ),
       GoRoute(

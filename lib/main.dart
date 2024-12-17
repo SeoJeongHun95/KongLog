@@ -20,6 +20,7 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(CompanyAdapter());
   await Hive.openBox<Company>('companyBox');
+  await Hive.openBox<Company>('kongBox');
 
   initializeDateFormatting()
       .then((_) => runApp(const ProviderScope(child: MyApp())));
