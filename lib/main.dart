@@ -13,6 +13,7 @@ import 'src/models/company.dart';
 void main() async {
   // 빌드 개 쳐 느려짐
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

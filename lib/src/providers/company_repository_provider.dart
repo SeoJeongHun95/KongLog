@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../datasources/local/company_data_source.dart';
+import '../datasources/local/company_local_data_source.dart.dart';
 import '../models/company.dart';
 import '../repositories/company_repository.dart';
 
@@ -20,8 +20,8 @@ part 'company_repository_provider.g.dart';
 @riverpod
 CompanyRepository companyRepository(Ref ref) {
   final box = Hive.box<Company>('companyBox');
-  final localDataSource = CompanyDataSource(box);
-  return CompanyRepository(localDataSource);
+  final companyLocalDataSource = CompanyDataSource(box);
+  return CompanyRepository(companyLocalDataSource);
 }
 
 //박스를 열음
